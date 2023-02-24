@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!--favicon icon-->
+    <link
+      rel="icon"
+      href="assets/img/logo/black-100.png"
+      type="image/png"
+      sizes="16x16"
+    />
+
+    <!--build:css-->
+    <link rel="stylesheet" href="assets/css/main3.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="game.css" />
+
+    <!--title-->
+    <title>GAME</title>
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="preloader-wrap">
+        <!--<img src="assets/img/logo-color.png" alt="logo" class="img-fluid" />-->
+        <div class="thecube">
+          <div class="cube c1"></div>
+          <div class="cube c2"></div>
+          <div class="cube c4"></div>
+          <div class="cube c3"></div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top bg-transparent">
+        <div class="container">
+          <a class="navbar-brand" href="#"> </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="18"
+              height="18"
+              viewBox="0 0 17 17"
+            >
+              <g></g>
+              <path
+                d="M16 3v2h-15v-2h15zM1 10h15v-2h-15v2zM1 15h15v-2h-15v2z"
+                fill="#fff"
+              />
+            </svg>
+          </button>
+
+          <div
+            class="collapse navbar-collapse h-auto"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ml-auto menu">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="featuresDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Features</a
+                >
+                <div class="dropdown-menu" aria-labelledby="featuresDropdown">
+                  <a
+                    href="feature-list/feature/accessibility"
+                    class="dropdown-item first-dropdown-item"
+                    >Accessibility</a
+                  >
+                  <a
+                    href="feature-list/feature/algorithms"
+                    class="dropdown-item"
+                    >Algorithms</a
+                  >
+                  <a
+                    href="feature-list/feature/gamification"
+                    class="dropdown-item"
+                    >Gamification</a
+                  >
+                  <a
+                    href="feature-list/feature/teacher-tools"
+                    class="dropdown-item"
+                    >Teachers tools</a
+                  >
+                  <a
+                    href="feature-list/feature/in-development"
+                    class="dropdown-item last-dropdown-item"
+                    >In-development</a
+                  >
+                </div>
+              </li>
+              <li><a href="teacher_guides">Guides</a></li>
+              <li><a href="help">FAQ</a></li>
+              <li><a href="contact-us">Contact</a></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="loginDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Login</a
+                >
+                <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                  <a href="login" class="dropdown-item first-dropdown-item"
+                    >Student Login</a
+                  >
+                  <a href="login" class="dropdown-item last-dropdown-item"
+                    >Teacher Login</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main">
+      <div class="background-shadow"></div>
+
+      <div class="rules-info">
+        <div class="rules-title">
+          <h1>Rules</h1>
+        </div>
+
+        <div class="rules-details">
+          <h2>
+            <b>Aim:</b>
+            <span
+              >Fill in the 9x9 grid with numbers ensuring each row, column and
+              3x3 section contain each digit between 1 and 9.
+            </span>
+          </h2>
+
+          <h2>Rules:</h2>
+
+          <ul>
+            <li>
+              <p>
+                The game will start with a partially filled grid, you will have
+                to use logic to fill in the rest keeping in mind the below
+                rules. No row can contain more than one of each of the digits
+                between 1 and 9. No column can contain more than one of each of
+                the digits between 1 and 9. 3x3 grids cannot contain more than
+                one of each of the digits between 1 and 9.
+              </p>
+            </li>
+            <li>
+              <p>
+                Cells affected by the highlighted cell within the grid are
+                indicated with a “shadow” effect. If a fundamental rule is
+                broken then the colour of the typed number will change to red.
+                Time does not affect your number of points scored and is purely
+                there for self monitoring/improvement. Difficulty can be
+                adjusted using the drop-down located on the top-left.
+              </p>
+            </li>
+            <li>
+              <p>
+                You can restart the game at any point using the restart button
+                located on the top-right. You can see the solution, using the
+                “Show solution” button but this also means you will not receive
+                any points for the current grid. A correct submitted grid on
+                “Easy” will add 25 points to your leaderboard score. 35 and 45
+                points are awarded for “Medium” and “Hard” difficulties
+                respectively.
+              </p>
+            </li>
+          </ul>
+
+          <h2>
+            <b>Points:</b>
+            <span>
+              25 points for a correct grid, 30 on medium difficulty, 35 on hard,
+              40 on expert and 45 on evil.</span
+            >
+          </h2>
+        </div>
+
+        <div class="rules-checked">I understand</div>
+      </div>
+
+      <!--page header section start-->
+      <section
+        class="page-header-section pt-100 pb-60 bg-image"
+        image-overlay="8"
+      >
+        <div
+          class="background-image-wraper"
+          style="background: url('assets/img/slider-bg-1.jpg'); opacity: 1"
+        ></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-9 col-lg-7">
+              <div class="page-header-content text-white pt-4"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--page header section end-->
+
+      <!--blog section start-->
+      <section class="our-blog-section ptb-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="col-10 gray-light-bg">
+                <div class="rules rulesClick">Rules</div>
+                <div class="rules-small-screen rulesClick"></div>
+
+                <div class="game-title">
+                  <h1>Sudoku</h1>
+                </div>
+
+                <!--Game section Start-->
+
+                <div class="wrapper-parent initial-wrapper-parent">
+                  <div class="content initial-content">
+                    <div class="wrapper"></div>
+
+                    <div class="background-win">
+                      <h1>Excellent!</h1>
+
+                      <div class="end-game-difficulty">
+                        <h2>Difficulty</h2>
+                        <h2>easy</h2>
+                      </div>
+                      <div class="end-game-time">
+                        <h2>Time</h2>
+                        <h2>00:02:33</h2>
+                      </div>
+                    </div>
+
+                    <div class="start-game">Start</div>
+
+                    <div class="game-notes display-none">
+                      <span class="notes-state toggle-note">Off</span>
+                      <div class="note-container toggle-note">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon-game-control"
+                          viewBox="0 0 30 31"
+                        >
+                          <path
+                            fill="#0072E3"
+                            d="M25.43 4.76a5.42 5.42 0 01.19 7.52l-.18.2-13.5 13.48a.91.91 0 01-1.21.08l-.1-.08-5.07-5.08-.59 4.34 3.25-.44c.44-.05.84.2 1 .58l.03.11.02.11c.06.47-.24.91-.7 1.03l-.1.02-4.45.6a.94.94 0 01-.79-.27.92.92 0 01-.26-.65v-.13l1-7.4a.92.92 0 01.19-.44l.08-.09L17.71 4.76a5.45 5.45 0 017.72 0zm.35 20.08a1 1 0 110 2h-8.7a1 1 0 010-2h8.7zM21.4 10.18L9.43 22.13 11.3 24l11.95-11.95-1.86-1.86zm-3.23-3.23L6.2 18.91l1.92 1.91L20.07 8.86l-1.9-1.9zm3.42-1.93c-.69 0-1.35.2-1.92.56l-.15.1 5.01 5 .1-.14c.33-.5.51-1.09.55-1.7l.01-.22a3.58 3.58 0 00-3.6-3.6z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="note-name"></div>
+                    </div>
+
+                    <div class="panel panel-925">
+                      <div class="game">
+                        <div class="timer">00:00</div>
+                        <h1
+                          class="game-text restart-remove pointer-events game-remove-onstart"
+                        >
+                          restart
+                        </h1>
+                      </div>
+                    </div>
+
+                    <div class="show-solution display-none">
+                      <div class="solution pointer-events">
+                        <h1>show solution</h1>
+                      </div>
+
+                      <div class="restart-solution">
+                        <h1>new game</h1>
+                      </div>
+                    </div>
+
+                    <div class="difficulty difficulty-925">
+                      <div class="difficulty-toggle">
+                        <h2>Difficulty:</h2>
+                        <select
+                          class="difficulty-content"
+                          onchange="changeLevel(this.options[this.selectedIndex].value)"
+                        >
+                          <!-- <h3 class="open-bar">easy</h3>
+                          <span class="arrow-span open-bar"></span> -->
+                          <option value="0">easy</option>
+                          <option value="1">medium</option>
+                          <option value="2">hard</option>
+                          <option value="3">expert</option>
+                          <option value="4">evil</option>
+                        </select>
+                      </div>
+
+                      <!-- <div class="difficulty-list">
+                        <p>easy</p>
+                        <p>medium</p>
+                        <p>hard</p>
+                        <p>expert</p>
+                        <p>evil</p>
+                      </div> -->
+                    </div>
+                    <div class="wrapper"></div>
+                    <div class="numbers display-none">
+                      <div class="number">1</div>
+                      <div class="number">2</div>
+                      <div class="number">3</div>
+
+                      <div class="number">4</div>
+                      <div class="number">5</div>
+                      <div class="number">6</div>
+
+                      <div class="number">7</div>
+                      <div class="number">8</div>
+                      <div class="number">9</div>
+
+                      <div class="number">Del</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Game section End-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--blog section end-->
+    </div>
+
+    <div class="footer-bottom py-3 gray-light-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-7">
+            <div class="terms-policy-wrap text-lg-left text-md-left text-left">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a
+                    class="small-text"
+                    href="https://www.greengeeks.com/going-green"
+                    >We're 300% wind-powered!</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5">
+            <div
+              class="terms-policy-wrap text-lg-right text-md-right text-left"
+            >
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a class="small-text" href="terms_and_conditions">Terms</a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="small-text" href="data_policy">Data Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="scroll-top scroll-to-target primary-bg text-white"
+      data-target="html"
+    >
+      <svg
+        class="hand-up-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 384 512"
+      >
+        <path
+          d="M135.652 0c23.625 0 43.826 20.65 43.826 44.8v99.851c17.048-16.34 49.766-18.346 70.944 6.299 22.829-14.288 53.017-2.147 62.315 16.45C361.878 158.426 384 189.346 384 240c0 2.746-.203 13.276-.195 16 .168 61.971-31.065 76.894-38.315 123.731C343.683 391.404 333.599 400 321.786 400H150.261l-.001-.002c-18.366-.011-35.889-10.607-43.845-28.464C93.421 342.648 57.377 276.122 29.092 264 10.897 256.203.008 242.616 0 224c-.014-34.222 35.098-57.752 66.908-44.119 8.359 3.583 16.67 8.312 24.918 14.153V44.8c0-23.45 20.543-44.8 43.826-44.8zM136 416h192c13.255 0 24 10.745 24 24v48c0 13.255-10.745 24-24 24H136c-13.255 0-24-10.745-24-24v-48c0-13.255 10.745-24 24-24zm168 28c-11.046 0-20 8.954-20 20s8.954 20 20 20 20-8.954 20-20-8.954-20-20-20z"
+        />
+      </svg>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="assets/js/vendors/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/vendors/jquery.easing.min.js"></script>
+    <script src="assets/js/vendors/bootstrap.min.js"></script>
+    <script src="assets/js/vendors/validator.min.js" defer></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
